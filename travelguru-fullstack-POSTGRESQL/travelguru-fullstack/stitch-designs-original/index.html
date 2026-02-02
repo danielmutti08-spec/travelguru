@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Travel Guru</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "primary": "#0d93f2",
+                "background-light": "#f5f7f8",
+                "background-dark": "#101b22",
+            },
+            fontFamily: {
+                "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+    },
+}
+</script>
+<style type="text/tailwindcss">
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+header {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-scrolled {
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border-b border-white/20 shadow-sm py-4;
+}
+.header-scrolled .nav-link {
+    @apply text-slate-800 dark:text-white;
+}
+.header-scrolled .logo-text {
+    @apply text-slate-900 dark:text-white;
+}
+.header-scrolled .logo-icon {
+    @apply text-primary;
+}
+.header-scrolled .search-container {
+    @apply bg-slate-100 dark:bg-white/10 border-slate-200 dark:border-white/20;
+}
+.header-scrolled .search-input {
+    @apply text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/50;
+}
+.header-scrolled .search-icon {
+    @apply text-slate-400 dark:text-white;
+}
+.header-scrolled .btn-signin {
+    @apply bg-slate-900 text-white dark:bg-white dark:text-slate-900;
+}
+.hero-gradient-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 25%);
+}
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<header class="fixed top-0 left-0 right-0 z-50 w-full py-6" id="main-header">
+<div class="max-w-[1440px] mx-auto px-8 flex items-center justify-between">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3">
+<div class="size-7 logo-icon text-white transition-colors duration-300">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="logo-text text-white text-2xl font-extrabold leading-tight tracking-tight transition-colors duration-300">The Travel Guru</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="nav-link text-white/90 text-sm font-bold hover:text-white transition-colors" href="destinations.html">Destinations</a>
+<a class="nav-link text-white/90 text-sm font-bold hover:text-white transition-colors" href="#">Guides</a>
+<a class="nav-link text-white/90 text-sm font-bold hover:text-white transition-colors" href="#">About</a>
+<a class="nav-link text-white/90 text-sm font-bold hover:text-white transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center search-container bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 transition-all duration-300">
+<span class="material-symbols-outlined search-icon text-white text-[20px] transition-colors duration-300">search</span>
+<input class="search-input bg-transparent border-none focus:ring-0 text-sm w-44 placeholder:text-white/70 text-white transition-colors duration-300" placeholder="Search stories..." type="text"/>
+</div>
+<button class="btn-signin bg-white text-slate-900 text-sm font-bold px-7 py-2.5 rounded-full hover:scale-105 transition-all shadow-lg">
+Sign In
+</button>
+</div>
+</div>
+</header>
+<main class="w-full">
+<section class="relative w-full min-h-screen flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAk9fcS79s6QKD1bViLCMEmbIYHXYrTCYT61NHQtEAdyzmJey-A8MdNZ6IhFdbolEx_x68WX5AF5gQlofCvF7HAeIH1sv_O4J_xs0-aGL9TIdTJPakElOv9gdHeDSd_Wm_GLYmJLC_X1KnkCOOaUwzwKyN-2SwTs3G_T8WIQmT1zvbWCR2POcyJjqqLuGbVPNsRCa4nc4059p4hgLP4L3epklKLxivmf1B4kR1DWuw0LMX3r2d05Np0pAK8L03K3W_TuYOKVoe68uI");'></div>
+<div class="absolute inset-0 hero-gradient-overlay"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+<span class="text-white/80 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Travel Chronicles</span>
+<h1 class="text-white text-6xl md:text-8xl lg:text-9xl font-black leading-[0.95] tracking-[-0.05em] mb-8">
+Explore the <br/><span class="text-primary italic">Unseen.</span>
+</h1>
+<p class="text-white/90 text-lg md:text-2xl font-medium max-w-2xl mx-auto mb-12 leading-relaxed">
+Raw perspectives and untold stories from the furthest corners of the globe.
+</p>
+<div class="flex flex-col sm:flex-row gap-5 justify-center">
+<button class="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl hover:bg-blue-500 transition-all">
+Start Exploring
+</button>
+<button class="bg-white/10 backdrop-blur-lg border border-white/30 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
+Travel Guides
+</button>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2">
+<span class="material-symbols-outlined text-white/50 text-4xl">keyboard_arrow_down</span>
+</div>
+</section>
+<section class="max-w-[1280px] mx-auto px-4 py-16" id="articles">
+<div class="flex items-center justify-between mb-12 overflow-x-auto">
+<div class="flex gap-4 pb-2">
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-900 text-white px-8 font-bold transition-all shadow-lg">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+All Posts
+</button>
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 px-8 text-slate-700 dark:text-slate-200 font-semibold border border-slate-200 dark:border-slate-700 hover:border-primary transition-all">
+Adventure
+</button>
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 px-8 text-slate-700 dark:text-slate-200 font-semibold border border-slate-200 dark:border-slate-700 hover:border-primary transition-all">
+Luxury
+</button>
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 px-8 text-slate-700 dark:text-slate-200 font-semibold border border-slate-200 dark:border-slate-700 hover:border-primary transition-all">
+Budget
+</button>
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 px-8 text-slate-700 dark:text-slate-200 font-semibold border border-slate-200 dark:border-slate-700 hover:border-primary transition-all">
+Culture
+</button>
+</div>
+<div class="hidden md:flex gap-3">
+<button class="p-2.5 rounded-full bg-white border border-slate-200 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2.5 rounded-full bg-white border border-slate-200 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="mb-20">
+<div class="flex items-end justify-between mb-10 px-2">
+<div>
+<h2 class="text-4xl font-extrabold text-[#0d161c] dark:text-white tracking-tight">Recent Discoveries</h2>
+<p class="text-slate-500 mt-2 font-medium">Unbiased insights from world explorers.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+View all stories <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<a href="article.html" class="group flex flex-col gap-5 bg-transparent transition-all">
+<div class="relative overflow-hidden rounded-2xl aspect-[4/5] shadow-sm">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-1000 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDha39NChc4ZtiZqrcjhVjfqmeWXCBq6-j0RVPnW2tmuPb4PHjLQSoWsgCDaAyZhiUTiiyV8ZiAT9PwxbsOgEz2RckbR1M-UOz3OVSayIwUMvcVkTSsV8btNN4Zr3kQD4hgXwGddpBuY1OGpFwIiPKrhhEOoMBKK1gjdStsIk4cuqPa_NKhsKWbN0IiF6nsN4WjiHWnCnCuv7PZdJjX0rML8f4RTA02EjzQ--IBAuwZi8nPg36vfo3n6Lq310tf5xjeqnob72_QSoM");'></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-6 rounded-xl shadow-2xl transition-transform duration-300 group-hover:-translate-y-2">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Philippines
+</div>
+<h3 class="text-[#0d161c] dark:text-white text-2xl font-bold leading-tight">The Hidden Lagoons of Palawan</h3>
+</div>
+</div>
+</div>
+</a>
+<div class="group flex flex-col gap-5 bg-transparent transition-all">
+<div class="relative overflow-hidden rounded-2xl aspect-[4/5] shadow-sm">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-1000 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDW6n-wbrkcz3iLdjJQHRjnwRQKkVIFZaH1EOLK3cNPxwIkGvn9m9qRqKlCq7Xy3qgPetUcN3AqFxop2uqCV7pY49OOsRJaxTPgLYPv5yszMspQ9-ActE241h1LTpmfiHeObWChrIN9rRWhVwnDNbEWhfLQA7F_vF9d1w4iDo3SDSV45nCGPm-8_tjKrJqxoOiAWahDx0Any7_BcZvqwCD7lhJlLid-ZqniyNcEJgU_mC61a-KJeFdPj3T1dm-XkMo0Rqp2ErMJXuc");'></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-6 rounded-xl shadow-2xl transition-transform duration-300 group-hover:-translate-y-2">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Italy
+</div>
+<h3 class="text-[#0d161c] dark:text-white text-2xl font-bold leading-tight">Alpine Escapes: The Dolomites</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="group flex flex-col gap-5 bg-transparent transition-all">
+<div class="relative overflow-hidden rounded-2xl aspect-[4/5] shadow-sm">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-1000 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiem1Ut1k5MA0nfREWm02AHbMJldKu2tXYTuFgoqy320y0HMAGWA-3Ljf4qY2hTr9o8N8z1akVQnht3AXi8e97_M8hSHsgNxU_cZkWjnsVSB_CGB1zz9zP5jfpFA8rvbElovyDWXaUDlOaLTSuXm116zdBcDTzWD7hi56CPIHEnsZyuy5KcIzonjk7LMLqsbXtW3BqAREaTanjIRKmvfl9eaR62XUili8XajQUiz_GzaCe0tmY1_szHNjht5gJO8tgFAqZL4Zdryc");'></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-6 rounded-xl shadow-2xl transition-transform duration-300 group-hover:-translate-y-2">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Morocco
+</div>
+<h3 class="text-[#0d161c] dark:text-white text-2xl font-bold leading-tight">Golden Sands of Morocco</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-[1280px] mx-auto px-4 mb-24">
+<div class="relative rounded-[3rem] overflow-hidden bg-slate-900 group">
+<div class="flex flex-col lg:flex-row min-h-[550px]">
+<div class="lg:w-1/2 p-12 lg:p-20 flex flex-col justify-center order-2 lg:order-1">
+<span class="text-primary font-bold mb-6 flex items-center gap-2 uppercase tracking-[0.2em] text-xs">
+<span class="material-symbols-outlined">verified_user</span> Master Guide
+</span>
+<h2 class="text-white text-5xl lg:text-6xl font-black mb-8 leading-tight">The 2024 Solo <br/>Traveler's Bible</h2>
+<p class="text-slate-300 text-xl mb-10 max-w-md leading-relaxed">
+A deep-dive into venturing out on your own. From safety tips to the world's most welcoming hidden hubs.
+</p>
+<div>
+<button class="bg-primary text-white font-bold px-10 py-4 rounded-full hover:scale-105 transition-all flex items-center gap-2 shadow-xl">
+Get the Dossier <span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<div class="lg:w-1/2 min-h-[350px] order-1 lg:order-2 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmM-TcvDX9XlqaJKDCX09lGoHDoFjcgS7LbaLoVOvNf8kpqiuVE5CluvfRZ1ElNu-PMWocTBo66RlmDbARnGDf6uSbufBliXyNovM6w_fTWRFHOHXp7Vv7H5p7rqzdI3uLJsYsFwrQ7RQrJkSfEOaiGehSWAaNhzQWpUuzSawX_VLk-fdVpfGqoToIq41DggW7M4tJ-2WBTnm6ogQG0oiA3n8oWk88qof1Cm6-fEWWCko1IaBQ3LHTThbZG9M04ZBxtw314Jmy78A");'></div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 py-24 border-y border-slate-100 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto px-4 text-center">
+<div class="max-w-2xl mx-auto">
+<h2 class="text-4xl font-extrabold mb-6 tracking-tight">Stay Informed</h2>
+<p class="text-slate-500 dark:text-slate-400 mb-12 text-lg leading-relaxed">
+Join 50,000+ travel enthusiasts. Receive the world's most beautiful destinations and exclusive guides in your inbox every Sunday.
+</p>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-8 py-4 rounded-full border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-primary focus:border-primary text-lg" placeholder="Email address" type="email"/>
+<button class="bg-slate-900 dark:bg-primary text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition-all text-lg" type="submit">
+Subscribe
+</button>
+</form>
+<p class="text-xs text-slate-400 mt-6 uppercase tracking-widest font-bold">End-to-End Inspiration</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-background-dark pt-24 pb-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 text-primary mb-8">
+<div class="size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#0d161c] dark:text-white text-xl font-extrabold tracking-tight">The Travel Guru</h2>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed mb-8">
+Your source for travel excellence. We explore hidden gems and share stories to fuel your next adventure.
+</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">camera</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-8 text-sm uppercase tracking-widest">Explore</h4>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="destinations.html">Destinations</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Best Hotels</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Travel Gear</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Photography Tips</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-8 text-sm uppercase tracking-widest">About</h4>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">The Team</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press Kit</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-8 text-sm uppercase tracking-widest">Support</h4>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-10 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-400">
+<p>© 2024 The Travel Guru.</p>
+<div class="flex gap-8">
+<a class="hover:text-slate-600 transition-colors" href="#">English</a>
+<a class="hover:text-slate-600 transition-colors" href="#">USD</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) {
+        header.classList.add('header-scrolled');
+    } else {
+        header.classList.remove('header-scrolled');
+    }
+});
+</script>
+
+</body></html>

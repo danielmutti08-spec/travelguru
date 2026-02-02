@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Travel Guru - Hidden Gems of the Amalfi Coast</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d93f2",
+                        "background-light": "#fcfdfe",
+                        "background-dark": "#0a0f12",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            }.fixed-header {
+                @apply fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out;
+                height: 5rem;
+                display: flex;
+                align-items: center;
+                animation: header-reveal linear both;
+                animation-timeline: scroll();
+                animation-range: 0px 400px;
+            }
+            @keyframes header-reveal {
+                from {
+                    background-color: transparent;
+                    backdrop-filter: blur(0px);
+                    border-bottom-color: transparent;
+                }
+                to {
+                    background-color: rgba(255, 255, 255, 0.7);
+                    backdrop-filter: blur(10px);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                }
+            }.dark .fixed-header {
+                animation: header-reveal-dark linear both;
+                animation-timeline: scroll();
+                animation-range: 0px 400px;
+            }
+            @keyframes header-reveal-dark {
+                from {
+                    background-color: transparent;
+                    backdrop-filter: blur(0px);
+                    border-bottom-color: transparent;
+                }
+                to {
+                    background-color: rgba(10, 15, 18, 0.8);
+                    backdrop-filter: blur(10px);
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                }
+            }.nav-link, .logo-text, .search-icon {
+                @apply transition-colors duration-500;
+                animation: nav-color-change linear both;
+                animation-timeline: scroll();
+                animation-range: 0px 400px;
+            }
+            @keyframes nav-color-change {
+                from { color: white; }
+                to { color: #0f172a; }}
+            .dark .nav-link, .dark .logo-text, .dark .search-icon {
+                animation: nav-color-change-dark linear both;
+                animation-timeline: scroll();
+                animation-range: 0px 400px;
+            }
+            @keyframes nav-color-change-dark {
+                from { color: white; }
+                to { color: #f8fafc; }}
+            .hero-gradient {
+                background-image: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%);
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1e293b] dark:text-slate-200 antialiased">
+<header class="fixed-header">
+<div class="max-w-[1440px] w-full mx-auto px-6 lg:px-12 flex items-center justify-between h-full">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-2.5">
+<div class="size-7 text-primary">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V44Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="logo-text text-lg font-extrabold leading-tight tracking-[0.1em] uppercase">The Travel Guru</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="nav-link text-[11px] uppercase tracking-[0.2em] font-bold hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="nav-link text-[11px] uppercase tracking-[0.2em] font-bold hover:text-primary transition-colors" href="#">Intelligence</a>
+<a class="nav-link text-[11px] uppercase tracking-[0.2em] font-bold hover:text-primary transition-colors" href="#">The Edit</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="search-icon flex items-center">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.15em] transition-all">
+                Subscribe
+            </button>
+</div>
+</div>
+</header>
+<main>
+<section class="relative w-full h-[85vh] flex items-end">
+<div class="absolute inset-0 z-0">
+<img alt="Amalfi Coast" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8OIOkkorA_WTV6fuMRLjfb4zGcq1cOU6cAnk1KBfJqaExflaNQVCYIoLZcsLUH3RGYpvt7Sc70WKsj8sM_Lr-iWgu3SuKcql_nbrsIGCmwKCfuQGGTjSD2xbDuGxXGakofGSSUQwgpNwvXSr1fou1gaJX03q7pHvl9gaPrPq4SSBqdiwLsujnQor0h-WSOMpkCnk6tvb8XagaxwqAq_RTYYPcEd18mcT3eVdxi4T_mouHAyaRRhmlknnxeyYeuNjFJo62pOfyL3k"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 lg:px-12 pb-24">
+<div class="max-w-5xl">
+<h1 class="text-white text-6xl lg:text-8xl font-serif italic leading-[1] text-balance">Hidden Gems of the Amalfi Coast</h1>
+</div>
+</div>
+</section>
+<div class="w-full max-w-[1440px] mx-auto px-6 lg:px-12 py-24 flex flex-col lg:flex-row gap-20">
+<aside class="hidden lg:flex flex-col gap-10 w-12 sticky top-32 h-fit">
+<button class="group flex flex-col items-center gap-3 transition-transform">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary text-2xl">favorite</span>
+<p class="text-[9px] font-bold uppercase tracking-widest text-slate-400">1.2k</p>
+</button>
+<button class="group flex flex-col items-center gap-3 transition-transform">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary text-2xl">share</span>
+<p class="text-[9px] font-bold uppercase tracking-widest text-slate-400">Share</p>
+</button>
+<button class="group flex flex-col items-center gap-3 transition-transform">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary text-2xl">bookmark</span>
+<p class="text-[9px] font-bold uppercase tracking-widest text-slate-400">Save</p>
+</button>
+</aside>
+<article class="flex-1 max-w-[800px]">
+<div class="prose prose-lg dark:prose-invert max-w-none prose-p:leading-[1.9] prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-headings:font-display prose-headings:font-extrabold">
+<p class="text-3xl leading-relaxed text-slate-900 dark:text-white font-serif italic mb-16 border-b border-slate-100 dark:border-slate-800 pb-16 first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:float-left first-letter:text-primary">
+                    Beyond the glittering facades of Positano and the bustling squares of Amalfi lies a different coast. One where lemon groves hang heavy over forgotten stone paths, and the only soundtrack is the distant hum of a fisherman's motorboat.
+                </p>
+<h2 class="text-4xl mb-10 tracking-tight text-slate-900 dark:text-white">The Forgotten Path to Ravello</h2>
+<p class="mb-10">
+                    While most visitors take the winding bus route up the mountain, those seeking true tranquility opt for the ancient mule tracks. These <span class="italic font-serif">scalinatella</span> (little stairs) weave through terrace after terrace of citrus trees. It is here that the scent of the Amalfi Coast truly reveals itself—a heady mix of salt air and ripening lemons.
+                </p>
+<blockquote class="my-20 border-none p-0 text-center relative">
+<span class="material-symbols-outlined absolute -top-12 left-1/2 -translate-x-1/2 text-primary/10 text-8xl">format_quote</span>
+<p class="text-4xl font-serif italic text-slate-900 dark:text-white leading-tight mb-8">
+                        "The real magic of the coast isn't in the maps, but in the stairs you didn't plan to climb."
+                    </p>
+<cite class="not-italic text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Local Wisdom</cite>
+</blockquote>
+<p class="mb-12">
+                    Reaching Ravello by foot rewards you with a perspective that no car can offer. You see the intricate irrigation systems built centuries ago, still feeding the lush gardens of Villa Cimbrone. By the time you reach the main square, the luxury of a cold <span class="italic font-serif">granita di limone</span> feels like a hard-earned prize.
+                </p>
+<figure class="my-20 group">
+<div class="overflow-hidden rounded-2xl shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
+<img alt="Amalfi Terrazza" class="w-full h-auto object-cover max-h-[600px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaecwM7NHXCL_DtUD07gzTevKzAKDOzkUiF4Nd50ePVm6d0leMkHYNv-aeNQyzApB3I6bMdz8xZoeW2TCm6rh0syHG0nsLY1D5g95RjSLszmFcicX2JyFxnnkO7PTp0Q_js04K6oqBm0NbzSHy2SzOvC9yqdl4-CsH7_Y3I__kXkGjrD5DYuFeIT3TXw98l5MBreEH1k2VP0IfU4weuouwACT_JzpIfT1c9YXerhCXn4SPvmzr-URSOrDAVNmYUnwBQIPh1d0mPks"/>
+</div>
+<figcaption class="mt-6 text-[11px] tracking-[0.05em] uppercase font-bold text-center text-slate-400">
+                        The vertical gardens of Ravello produce the world's finest lemons.
+                    </figcaption>
+</figure>
+<h2 class="text-4xl mb-10 tracking-tight text-slate-900 dark:text-white">Praiano: The Quiet Middle</h2>
+<p>
+                    Often skipped in favor of its more famous neighbors, Praiano offers a genuine glimpse into coastal life. It's home to some of the most stunning sunsets on the peninsula. Unlike Positano, where the sun slips behind the mountains early, Praiano stays bathed in golden light until the final moments of the day.
+                </p>
+</div>
+</article>
+<aside class="w-full lg:w-[360px] flex flex-col gap-10">
+<div class="bg-white dark:bg-[#121a1f] p-10 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-2xl shadow-slate-200/50 dark:shadow-none sticky top-32">
+<h3 class="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] mb-12 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-primary">explore</span>
+                    Guru Intel
+                </h3>
+<div class="space-y-10">
+<div class="flex gap-5">
+<div class="size-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">Best Time</p>
+<p class="font-serif italic text-lg">May to September</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="size-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">Budget</p>
+<p class="font-serif italic text-lg">High / Luxury</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="size-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">Must Try</p>
+<p class="font-serif italic text-lg">Limoncello Spritz</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-14 bg-slate-900 dark:bg-primary text-white font-bold py-5 rounded-2xl hover:bg-primary transition-all text-[11px] uppercase tracking-[0.3em]">
+                    Download Brief
+                </button>
+</div>
+</aside>
+</div>
+<section class="w-full bg-slate-50 dark:bg-[#0a0f12] py-32 border-t border-slate-100 dark:border-slate-900">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="flex items-end justify-between mb-16">
+<div>
+<span class="text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Keep Exploring</span>
+<h2 class="text-5xl font-serif italic text-slate-900 dark:text-white">Related Intelligence</h2>
+</div>
+<a class="group text-slate-900 dark:text-white font-bold text-xs uppercase tracking-widest flex items-center gap-3 hover:text-primary transition-colors pb-2 border-b-2 border-transparent hover:border-primary" href="#">
+                    All stories <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-8 shadow-2xl">
+<img alt="Tuscany" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtDmSKDKkuPbOcSoGPWApXtuzZmcKAOm0kAI8b-6J0NIHBBqpFlNKqKcFI-44y0yvRuFjQA7v4PiWxQTIHUoY62bBeJ-titCYfpbHY3qkuFJhPH34lo5lWwuX-CL046JlN0hG2XpfY2ZLPMw5MyHXRn4CUStsY1oelDEygMo7cWkYnypTXxJQTtbNdRXDuuCnMyNDMgrKlmUrm072r96ZJgOzFlU2o9FTGzLe6Tk63Xd02QcWDDePl3rqxn7rJhAwROH-a629eJ8k"/>
+</div>
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-4">Countryside</p>
+<h4 class="text-2xl font-serif italic leading-tight group-hover:text-primary transition-colors mb-3">Tuscany Vineyards: A Journey Through the Senses</h4>
+<p class="text-xs text-slate-400 uppercase tracking-widest">Sept 12, 2023</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-8 shadow-2xl">
+<img alt="Rome" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy5iWFTKW116I-lr-6JIabeZPXCUDe69Jmz9kdz-EW21JMprvIzjNSDaxiW7hUzEgLyvKlaFWAp8tVV_0VNA4K7wjPo6bys5bpcmt-LsoXge6dKlfLy7YWzFtD_JwZSQ57uJPjWwR-_mZGa0XYV9q3crCgXSzVjtyrSACg4LwnERaOZD0apl3u7XKZacbe-MHbJF4NH1tYojSvVV3CGqMKeVCMhKg2R0diVH5cDBo_NSYWA02_tC2F0ioEh51r3kkNnV28bMevoTo"/>
+</div>
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-4">City Life</p>
+<h4 class="text-2xl font-serif italic leading-tight group-hover:text-primary transition-colors mb-3">Rome by Night: Secrets of the Eternal City</h4>
+<p class="text-xs text-slate-400 uppercase tracking-widest">Aug 28, 2023</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-8 shadow-2xl">
+<img alt="Sicily" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdL4yLAG5DJgwj0-xVvhEE0RfI535m1DmSR8vIcs-ot9qw2KSNZ47EbmgXJp1UKvM1D-CDiTuCc5CeLwV2Juh8wobtx-38k0qb3IQOLjp8S6wktIk-juXcfdWeYSPx3wOAybcztsK_E1pAR6cm9j8rEfD-B3coazfelUPuuzJPR3lZxIJY0rfesHPZns9XdH80RDSu2_zrFS_tEmomya2-ZrUiNbgY1N2nng9d14CPasd1hdja1YycZyOm6PjP8pgUL_jVnSTrU8M"/>
+</div>
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-4">Beachfront</p>
+<h4 class="text-2xl font-serif italic leading-tight group-hover:text-primary transition-colors mb-3">Sicily’s Best Kept Coastal Secrets</h4>
+<p class="text-xs text-slate-400 uppercase tracking-widest">Aug 05, 2023</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-950 text-white py-24">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-start gap-20 mb-20 pb-20 border-b border-white/5">
+<div class="max-w-xs">
+<div class="flex items-center gap-3 mb-8">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V44Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-extrabold uppercase tracking-widest">The Travel Guru</h2>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed font-serif italic">
+                    Uncovering the world's best kept secrets through anonymous exploration. Authentic and purely focused on the journey.
+                </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-16">
+<div class="flex flex-col gap-5">
+<p class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Explore</p>
+<a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Destinations</a>
+<a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Luxury Guides</a>
+<a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Travel Tips</a>
+</div>
+<div class="flex flex-col gap-5">
+<p class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Journal</p>
+<a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">New Stories</a>
+<a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Archive</a>
+</div>
+<div class="flex flex-col gap-5">
+<p class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Legal</p>
+<a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Privacy</a>
+<a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Terms</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 text-slate-600 text-[10px] uppercase tracking-widest font-bold">
+<p>© 2023 The Travel Guru. An Anonymous Publication.</p>
+<div class="flex gap-10">
+<a class="hover:text-white transition-colors" href="#">Instagram</a>
+<a class="hover:text-white transition-colors" href="#">Pinterest</a>
+<a class="hover:text-white transition-colors" href="#">X (Twitter)</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
