@@ -1,7 +1,7 @@
 [build]
   base = "travelguru-fullstack-POSTGRESQL/travelguru-fullstack/frontend"
   command = "npm install && npm run build"
-  publish = "travelguru-fullstack-POSTGRESQL/travelguru-fullstack/frontend/dist"
+  publish = "dist"
 
 [build.environment]
   VITE_API_URL = "https://travelguru-production.up.railway.app"
